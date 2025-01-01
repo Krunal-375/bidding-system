@@ -17,7 +17,7 @@ The Bidding System is a scalable, real-time auction platform built with Go. It a
 
 ## Technology Stack
 - **Backend**: Go (Golang)
-- **Database**: --
+- **Database**: Redis (Real-time DB) & Postgres (Persistent DB)
 - **Caching**: --
 - **API Framework**: --
 - **Real-Time Communication**: WebSockets
