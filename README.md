@@ -31,11 +31,26 @@ The Bidding System is a scalable, real-time auction platform built with Go. It a
 ### Prerequisites
 - Go (version 1.19 or later)
 
+### Environment Variables
+
+Create a `.env` file in the root directory with the following environment variables:
+
+```bash
+PORT=<port-number-of-the-service>
+```
+
 ### Steps
 
 1. Start the server:
    ```bash
    go run cmd/server/main.go
+   ```
+
+### With Docker Compose
+
+1. Start the server:
+   ```bash
+   docker-compose up
    ```
 
 ---
