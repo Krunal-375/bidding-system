@@ -1,0 +1,19 @@
+services:
+  # The bidding-system service
+  bidding-systems:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "8000:80"
+
+    # volumes:
+
+    # healthcheck:
+    #   test: ["CMD-SHELL", "<TEST SCRIPT OR COMMAND>"]
+    #   interval: 2s
+    #   timeout: 20s
+    #   retries: 3
+
+    # post_start:
+    #   - command: [ "migration_script" ]
