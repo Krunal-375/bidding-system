@@ -1,16 +1,18 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"os"
+
+	"github.com/saigenix/bidding-system/pkg/web"
 )
 
-// ENV: PORT - port to run the server on
-
 func main() {
-	// router := web.SetupRouter()
-	// log.Println("Starting server on :8080...")
-	// router.Run(":8080")
-	fmt.Println(os.Getenv("PORT")) // Works only with containerzied build
-	fmt.Println("Hello, World!")
+	router := web.SetupRouter()
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	log.Printf("Starting server on :%s...", port)
+	router.Run(":" + port)
 }
